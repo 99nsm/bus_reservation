@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Appenders -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />  <!--  로고 찍히는 장소 설정 -->
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Application Loggers -->
+	<logger name="com.bitstudy.app">  <!-- 내 생각인데 com 안에있는 bitstudy 안에있는 app 파일의 로그 레벨 설정 아래 있는 애들도 쩌기 있는 애들 안에있는 거 돌아갔을 때 로그 레벨 설정 인거 같음-->
+		<level value="info" />
+	</logger>
+
+	<!-- 3rdparty Loggers -->
+	<logger name="org.springframework.core">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.beans">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.context">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.web">
+		<level value="info" />
+	</logger>
+
+ <!--https://freehoon.tistory.com/113 여기 참고했음-->
+	<!-- SQL Logger -->
+	<logger name="jdbc.sqltiming" additivity="false">
+		<level value="warn" />
+		<appender-ref ref="console"/>
+	</logger>
+
+	<logger name="jdbc.sqlonly" additivity="false">
+	<level value="info"/>
+	<appender-ref ref="console"/>
+	</logger>
+
+	<logger name="jdbc.audit" additivity="false">
+	<level value="warn"/>
+	<appender-ref ref="console"/>
+	</logger>
+
+	<logger name="jdbc.resultset" additivity="false">
+		<level value="warn" />
+		<appender-ref ref="console"/>
+	</logger>
+
+	<logger name="jdbc.resultsettable" additivity="false">
+		<level value="info"/>
+		<appender-ref ref="console"/>
+	</logger>
+
+
+
+	<!-- Root Logger -->
+	<root>
+		<priority value="warn" />
+		<!--<priority value="TRACE" />-->
+		<appender-ref ref="console" />   <!-- 콘설 appender을 전체적으로 따른다 라고 설정한거네-->
+	</root>
+
+</log4j:configuration>
+<!-- https://to-dy.tistory.com/20 이거보고 공부 했음-->
+<!-- logger 에서 파일 위치 설정하고 그파일에서 레벨안에서의 로그가 발생하면 appender 쪽에가서 어디에 찍어줄지 정한다음 정한 화면에 어떤 스타일로 찍어줄지 보고 출련되네 -->
