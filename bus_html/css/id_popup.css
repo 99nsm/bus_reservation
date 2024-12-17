@@ -31,8 +31,7 @@ a {
     left: 50%;
     top: 40%;
     transform: translate(-50%,-50%);
-    /* border: 1px solid rgb(107, 107, 107);; */
-    border-radius: 5px;
+    /* border: 1px solid rgb(107, 107, 107); */
     border-radius: 5px;
     padding: 5px;
     box-sizing: border-box;
@@ -45,14 +44,9 @@ a {
     margin-top: 15px;
 }
 
-#error{
-    color: red;
-    margin-bottom: 20px;
-}
 
 
-
-.form > input
+.user_name,.user_dob,.email_code,.user_email
 {
     width: 80%;
     height: 40px;
@@ -71,48 +65,23 @@ a {
 }
 
 
-.register{
-    margin: 10px auto 50px auto;
+.next_btn,.chk_btn{
+    margin: 30px auto 30px auto;
     width: 80%;
     height: 40px;
     text-align: center;
     line-height: 40px;
     color: #f8f8f8;
-    background-color: rgb(107, 107, 107);
+    background-color: #9e5dff;
     border-radius: 5px;
     cursor: pointer;
     border: none;
 }
 
-.login{
-    width: 80%;
-    height: 50px;
-    line-height: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    margin: 0 auto;
-    margin-bottom: 15px;
-    font-size: 14px;
+
+
+.error{
     text-align: center;
-}
-.login>span{
-    color: rgb(212, 58, 58);
-    font-weight: 600;
-    margin-left: 5px;
-}
-
-.send_btn{
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 12px;
-    box-sizing: border-box;
-    color: #f8f8f8;
-    background-color: rgb(107, 107, 107);
-    cursor: pointer;
-}
-
-.send_btn_area{
-    width: 80%;
-    margin: 2px auto 15px auto;
-    text-align: left;
+    color: red;
+    margin-bottom: 20px;
 }

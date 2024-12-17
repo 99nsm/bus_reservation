@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./js/login.js"></script>
+
+    <link rel="stylesheet" href="./css/pw_popup.css">
+</head>
+<body>
+
+    <div id="wrap" class="contents_area">
+        <div class="main">
+            <div class="logo">비밀번호 초기화</div>
+            <div class="error"></div>
+            <form action="" method="post" class="loginbox">
+                <input type="text" placeholder="아이디" name="uesr_id" class="id">
+                <input type="text" placeholder="이름을 입력해 주세요" name="user_name" class="user_name">
+                <input type="text" placeholder="생년월일을 입력해 주세요 ex) 991220" name="user_dob" class="user_dob" maxlength="6">
+                <input type="text" placeholder="이메일을 입력해 주세요    ex) dkdk3153@naver.com" name="user_email" class="user_email">
+                <input type="text" placeholder="인증번호를 입력해 주세요." name="email_code" class="email_code" style="display: none;">
+                <input type="text" placeholder="비밀번호를 입력해 주세요" name="user_pw" class="user_pw" style="display: none;">
+                <input type="text" placeholder="비밀번호를 한번 더 입력해 주세요." class="user_pw_chk" style="display: none;">
+                <button class="next_btn">이메일로 인증하기</button>
+                <button class="chk_btn" style="display: none;">아이디 찾기</button>                <button class="change_btn" style="display: none;">비밀번호 변경하기</button>
+            </form>
+        </div>
+
+
+        <!-- 
+        추후 계획
+        1. 이메일로 인증하기 버튼을 눌러서 회원정보가 확인되고 이메일로 인증이 보내진다면 >> 아니면 에러에 안맞다고 띄워주기
+        2. 버튼 바뀌고 나오는 input들 바꾸고 인증번호 입력하는 거 살려주기 >> 맞으면 비밀번호 새로 셋팅 할 수 있는 칸 보여주고 제대로 입력했다면 변경해주기 >> 그후에 다시 원래 페이지로
+        -->
+    </div>
+</body>
+</html>
